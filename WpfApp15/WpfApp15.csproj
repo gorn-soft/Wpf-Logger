@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C16FBBDF-AAE3-43CB-B3A9-3B5B85E858E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp15</RootNamespace>
+    <AssemblyName>Logger</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WpfApp15.ApplicationEntry</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LogoProgram.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hangfire.Core, Version=1.7.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.7.10\lib\net46\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.5.1363, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.5-ci1363\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.1.2.1363, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.1.2-ci1363\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Maps.MapControl.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Maps.MapControl.WPF.1.0.0.3\lib\net40-Client\Microsoft.Maps.MapControl.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Toasts.Forms.Plugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Toasts.Forms.Plugin.3.3.2\lib\netstandard1.1\Toasts.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Command\ClearLogCommand.cs" />
+    <Compile Include="Main\ApplicationEntry.cs" />
+    <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Command\RelayCommand2.cs" />
+    <Compile Include="Command\WeakAction.cs" />
+    <Compile Include="Command\WeakFunc.cs" />
+    <Compile Include="Previewscreen\PreviewScreen.xaml.cs">
+      <DependentUpon>PreviewScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resource.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Value Converts\BaseValueConverter.cs" />
+    <Compile Include="Scripts\ProcessExtensions.cs" />
+    <Compile Include="Scripts\UIHelper.cs" />
+    <Compile Include="Scripts\LoggerKeys.cs" />
+    <Compile Include="Scripts\Value Converts\BooleanToBorderThicknessConverter.cs" />
+    <Compile Include="Scripts\Value Converts\BorderClipConverter.cs" />
+    <Compile Include="ViewModel\BedProgram.cs" />
+    <Compile Include="ViewModel\CpuModel.cs" />
+    <Compile Include="ViewModel\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="Scripts\Value Converts\NamePattern.cs" />
+    <Compile Include="Scripts\ScreenShot.cs" />
+    <Compile Include="ViewModel\ProcessListItem.cs" />
+    <Compile Include="ViewModel\UserControl\HomeStartMenu.xaml.cs">
+      <DependentUpon>HomeStartMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\UserControl\UserControlSettings.xaml.cs">
+      <DependentUpon>UserControlSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelProc.cs" />
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Black.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Blue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Previewscreen\PreviewScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewModel\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewModel\UserControl\HomeStartMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewModel\UserControl\UserControlSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </Resource>
+    <EmbeddedResource Include="Properties\Resource.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ViewModel\Images\Cursors\Cursor.ani" />
+    <None Include="ViewModel\Images\Logo.psd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Previewscreen\Icon\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ViewModel\Dakirby309-Windows-8-Metro-Other-Tasks-Metro.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ViewModel\Images\DefaultIconProgram.png" />
+    <Resource Include="ViewModel\Images\Add.png" />
+    <Resource Include="ViewModel\Images\Executable.png" />
+    <Resource Include="ViewModel\Images\trash-icon-interface-icon-delete-icon-png-favpng-vPLD9ravBE8U9ra9P2yfnMJsd.png" />
+    <Resource Include="ViewModel\Images\ideal-location.png" />
+    <Resource Include="ViewModel\Images\inst.png" />
+    <Resource Include="ViewModel\Images\github_PNG40.png" />
+    <Resource Include="ViewModel\Images\Gmail_Icon.png" />
+    <Resource Include="ViewModel\Images\20191104224338_5708.jpg" />
+    <Resource Include="ViewModel\Images\e595ef6dca0825a3b63a72fbeca6a190-3d-piechart-bars-by-vexels.png" />
+    <Resource Include="ViewModel\Images\images %281%29.jpg" />
+    <Resource Include="ViewModel\Images\investicii-otchet-v2.png" />
+    <Resource Include="ViewModel\Images\statics-analytics-market-data-research-performance-graph-chart-7-24988.png" />
+    <Resource Include="ViewModel\Images\Teleconference.png" />
+    <Resource Include="ViewModel\Images\unnamed.jpg" />
+    <Resource Include="ViewModel\Images\завантаження.jpg" />
+    <Resource Include="ViewModel\Images\back.jpg" />
+    <Resource Include="ViewModel\Images\language-png.png" />
+    <Resource Include="Previewscreen\Logo.png" />
+    <Resource Include="ViewModel\Images\Cursors\Blue Beveled normal.cur" />
+    <Resource Include="ResourcesLog\LogFileKey.txt" />
+    <Resource Include="ViewModel\Images\log.png" />
+    <Resource Include="ViewModel\copy.png" />
+    <Resource Include="ViewModel\Images\folder.png" />
+    <Resource Include="ViewModel\Images\Settings.png" />
+    <Resource Include="ViewModel\Images\Otchet.png" />
+    <Resource Include="ViewModel\Images\Stat.png" />
+    <Resource Include="ViewModel\Images\home-png-white-8.png" />
+    <Resource Include="ViewModel\computer-icons-house-home-vector-resume.png" />
+    <Resource Include="ViewModel\Images\LogoProg2.png" />
+    <Resource Include="LogoProgram.ico" />
+    <Resource Include="ViewModel\Images\images %281%29.png" />
+    <Resource Include="ViewModel\Images\LogoProgram.png" />
+    <Resource Include="ViewModel\Images\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\RadialMenu-master\RadialMenu-master\RadialMenu\RadialMenu.csproj">
+      <Project>{9d959b4c-a428-4ea7-9197-be04b37bf256}</Project>
+      <Name>RadialMenu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WindowsFormsApp1\WindowsFormsApp1.csproj">
+      <Project>{b00b3c62-0b07-48a0-9a9e-935a5554687d}</Project>
+      <Name>WindowsFormsApp1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ViewModel\Images\graph-icon-png-7.png" />
+    <Content Include="ViewModel\nvGpuLoad_x86.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.1.2-ci1363\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.2-ci1363\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.1.2-ci1363\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.1.2-ci1363\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>
